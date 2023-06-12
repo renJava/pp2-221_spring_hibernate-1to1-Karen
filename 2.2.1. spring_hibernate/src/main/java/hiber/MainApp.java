@@ -38,8 +38,10 @@ public class MainApp {
          System.out.println("Last Name = "+user.getLastName());
          System.out.println("Email = "+user.getEmail() + "\n");
       }
+
       System.out.println("User by car: " + userService.getUserByCar("Car5", 5));
 
       context.close();
    }
+
 }

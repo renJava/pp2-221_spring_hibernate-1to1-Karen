@@ -29,6 +29,7 @@ public class Car {
     }
 
 
+
     public Long getId() {
         return id;
     }
@@ -62,6 +63,8 @@ public class Car {
         user.setCar(this);
         this.user = user;
     }
+
+
 
     @Override
     public String toString() {
