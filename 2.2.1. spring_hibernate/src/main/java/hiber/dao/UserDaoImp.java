@@ -25,7 +25,7 @@ public class UserDaoImp implements UserDao {
       query.setParameter("series", series);
       User searchUser = query.getSingleResult();
       System.out.println("\nПоиск юзера по модели и серии машины:");
-      return query.getSingleResult();
+      return searchUser;
    }
 
 //@Override
