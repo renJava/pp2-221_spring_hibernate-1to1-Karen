@@ -14,6 +14,7 @@ import hiber.model.User;
 import hiber.service.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import javax.persistence.NoResultException;
 import java.util.List;
 
 public class MainApp {
@@ -33,13 +34,17 @@ public class MainApp {
       List<User> users = userService.listUsers();
 
       for (User user : users) {
-         System.out.println("\nId = "+user.getId());
-         System.out.println("First Name = "+user.getFirstName());
-         System.out.println("Last Name = "+user.getLastName());
-         System.out.println("Email = "+user.getEmail() + "\n");
+         System.out.println("\nId = " + user.getId());
+         System.out.println("First Name = " + user.getFirstName());
+         System.out.println("Last Name = " + user.getLastName());
+         System.out.println("Email = " + user.getEmail() + "\n");
       }
 
-      System.out.println("User by car: " + userService.getUserByCar("Car5", 5));
+      try {
+         System.out.println("User by car: " + userService.getUserByCar("Car5", 3));
+      } catch (RuntimeException r) {
+         System.err.println("Ошибка поиска пользователя по машине");
+      }
 
       context.close();
    }

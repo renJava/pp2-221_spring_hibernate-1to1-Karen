@@ -10,8 +10,8 @@ public class Car {
     @Id
     @Column(name = "id")
     private Long id;
-    @OneToOne(mappedBy = "car")
-    private User user;
+//    @OneToOne(mappedBy = "car")
+//    private User user;
 
     @Column(name = "model")
     private String model;
@@ -55,14 +55,14 @@ public class Car {
         this.series = series;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        user.setCar(this);
-        this.user = user;
-    }
+//    public User getUser() {
+//        return user;
+//    }
+//
+//    public void setUser(User user) {
+//        user.setCar(this);
+//        this.user = user;
+//    }
 
 
 
