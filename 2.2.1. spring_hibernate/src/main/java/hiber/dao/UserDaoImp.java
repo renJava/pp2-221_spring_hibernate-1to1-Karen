@@ -28,15 +28,6 @@ public class UserDaoImp implements UserDao {
       return searchUser;
    }
 
-//@Override
-//public User getUserByCar(String car_model, int car_series) {
-//   EntityManager entityManager = sessionFactory.getCurrentSession();
-//   TypedQuery<User> query = entityManager
-//           .createQuery("SELECT u FROM User u JOIN FETCH u.car m WHERE m.model = :model AND m.series =: series", User.class)
-//           .setParameter("model", car_model)
-//           .setParameter("series", car_series);
-//   return query.getSingleResult() == null ? query.getSingleResult() : new User();
-//}
 
    @Override
    public void add(User user) {

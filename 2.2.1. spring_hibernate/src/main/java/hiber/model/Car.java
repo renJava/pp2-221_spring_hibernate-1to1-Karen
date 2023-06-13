@@ -28,34 +28,6 @@ public class Car {
     }
 
 
-//Походу, Getterы и Setterы вообще не кужны
-//    public Long getId() {
-//        return id;
-//    }
-//
-//    public void setId(Long id) {
-//        this.id = id;
-//    }
-//
-//
-//    public String getModel() {
-//        return model;
-//    }
-//
-//    public void setModel(String model) {
-//        this.model = model;
-//    }
-//
-//    public Integer getSeries() {
-//        return series;
-//    }
-//
-//    public void setSeries(Integer series) {
-//        this.series = series;
-//    }
-
-    
-
     @Override
     public String toString() {
         return "[" +
