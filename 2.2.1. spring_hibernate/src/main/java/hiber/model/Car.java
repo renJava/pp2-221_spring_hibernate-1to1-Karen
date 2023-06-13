@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name = "cars")
 public class Car {
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id")
     private Long id;
@@ -23,7 +23,6 @@ public class Car {
     }
 
     public Car(String model, Integer series) {
-
         this.model = model;
         this.series = series;
     }
@@ -55,16 +54,7 @@ public class Car {
         this.series = series;
     }
 
-//    public User getUser() {
-//        return user;
-//    }
-//
-//    public void setUser(User user) {
-//        user.setCar(this);
-//        this.user = user;
-//    }
-
-
+    
 
     @Override
     public String toString() {

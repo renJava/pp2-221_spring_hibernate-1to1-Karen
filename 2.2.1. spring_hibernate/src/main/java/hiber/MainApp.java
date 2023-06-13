@@ -14,7 +14,6 @@ import hiber.model.User;
 import hiber.service.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import javax.persistence.NoResultException;
 import java.util.List;
 
 public class MainApp {
@@ -42,7 +41,7 @@ public class MainApp {
 
       try {
          System.out.println("User by car: " + userService.getUserByCar("Car5", 3));
-      } catch (RuntimeException r) {
+      } catch (RuntimeException re) {
          System.err.println("Ошибка поиска пользователя по машине");
       }
 
